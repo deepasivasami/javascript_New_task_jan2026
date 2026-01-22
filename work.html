@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+
+   
+
+
+<div class="container_fuild">
+
+
+
+        <form action="">
+            <h1 class="heads">Registration Form</h1>
+
+            <div class="container">
+                <label for="">User Name </label>
+                <input type="name" id="names" placeholder=" name">
+                <span id="name_error" class=" error"></span>
+
+            </div>
+            <div class="container">
+                <label for="">Email address: </label>
+                <input type="email" id="email" placeholder=" Email Id">
+                <span id="email_error" class=" error"></span>
+            </div>
+            <!-- <div class="container">
+                <label for="">Phone number</label>
+                <input type="number" id="number" placeholder=" phone number">
+                <span id="phone_error" class=" error"></span>
+            </div> -->
+            <div class="container">
+                <label for="">Password</label>
+                <input type="password" id="password" placeholder="password">
+                <span id="pass_error" class=" error"></span>
+            </div>
+            <div class="container">
+                <label for="">Confirm Password</label>
+                <input type="password" id="conform" placeholder="conform password">
+                <span id="conform_error" class=" error"></span>
+            </div>
+
+            
+
+
+        </form>
+        <div class="container">
+            <button onclick="registoreForm()"> Submit</button>
+
+        </div>
+        <div class="container">
+                <p>
+                  
+                    Already Registor ? <a href="../login/login.html">login</a>
+                </p>
+            </div>
+          <div class="container">
+                <p>
+            Admin ? Login Here
+            </p>
+            </div>
+    </div>
+
+
+    <script>
+
+
+        let registoreForm = () => {
+
+
+
+            let name = document.getElementById("names").value
+            let mail = document.getElementById("email").value
+            // let phone = document.getElementById("number").value
+            let pass = document.getElementById("password").value
+            let conpass = document.getElementById("conform").value
+
+
+
+            let na_err = document.getElementById("name_error")
+            let em_err = document.getElementById("email_error")
+            // let ph_err = document.getElementById("phone_error")
+            let pass_err = document.getElementById("pass_error")
+            let conform_error = document.getElementById("conform_error")
+
+
+            let ischeck = false
+
+
+            if (name === "") {
+                na_err.innerText = "Enter your name"
+                document.getElementById("names").style.border = "1px solid red"
+                let ischeck = false
+            }
+            else {
+                na_err.innerText = ""
+                let ischeck = true
+
+
+            }
+            if (mail === "") {
+                em_err.innerText = "Enter your Email Id"
+                document.getElementById("email").style.border = "1px solid red"
+                let ischeck = false
+
+            }
+            else {
+                em_err.innerText = ""
+                let ischeck = true
+
+            }
+            // if (phone === "") {
+            //     ph_err.innerText = "Enter your Phone number"
+            //     document.getElementById("number").style.border = "1px solid red"
+            //     let ischeck = false
+            // }
+            // else {
+            //     ph_err.innerText = ""
+            //     let ischeck = true
+
+            // }
+            if (pass === "") {
+               pass_err.innerText = "Enter your  password"
+                document.getElementById("password").style.border = "1px solid red"
+                let ischeck = false
+
+            }
+            else if(pass.length>8){
+                 pass_err.innerText = "must be 8 character"
+                document.getElementById("password").style.border = "1px solid red"
+                let ischeck = false
+
+            }
+            else {
+                pass_err.innerText = ""
+                let ischeck = true
+
+            }
+            if ( conpass === "") {
+               conform_error.innerText = "Enter your coniform password"
+                document.getElementById(" conform").style.border = "1px solid red"
+                let ischeck = false
+
+            }
+            else if(conpass !== pass){
+                conform_error.innerText = "Password do not match"
+                  document.getElementById(" conform").style.border = "1px solid red"
+                let ischeck = false
+
+                
+            }
+            else {
+               conform_error.innerText = ""
+                let ischeck = true
+
+            }
+            if (ischeck) {
+                alert("fill the all process sucessfully")
+            }
+
+        }
+
+
+         if (tamilmark === "") {
+                ta_rror.innerText = "Tamil mark can't be empty"
+            }
+            else if (tamilmark < 0 || tamilmark > 100) {
+                ta_rror.innerText = "invalid mark"
+            }
+            else {
+                ta_rror.innerText = ""
+            }
+            if (englishmark === "") {
+                en_rror.innerText = "English mark can't be empty"
+            }
+            else if (englishmark < 0 || englishmark > 100) {
+                en_rror.innerText = "invalid mark"
+            }
+            else {
+                en_rror.innerText = ""
+            }
+            if (mathsmark === "") {
+                mt_rror.innerText = "Maths mark can't be empty"
+            }
+            else if (mathsmark < 0 || mathsmark > 100) {
+                mt_rror.innerText = "invalid mark"
+            }
+            else {
+                mt_rror.innerText = ""
+            }
+            if (scincemark === "") {
+                sci_rror.innerText = "Science mark can't be empty"
+            }
+            else if (scincemark < 0 || scincemark > 100) {
+                sci_rror.innerText = "invalid mark"
+            }
+            else {
+                sci_rror.innerText = ""
+            }
+            if (ssmark === "") {
+                ss_rror.innerText = "Socialscience mark can't be empty"
+            }
+            else if (ssmark < 0 || ssmark > 100) {
+                ss_rror.innerText = "invalid mark"
+            }
+            else {
+                ss_rror.innerText = ""
+            }
+
+      
+
+        let total = Number(tamilmark) + Number(englishmark) + Number(mathsmark) + Number(scincemark) + Number(ssmark)
+          
+
+           
+       let seco= document.getElementById("result")
+       seco.textContent=` Your Total mark ${total}`
+
+        }
+
+
+    </script>
+
+
+    </script>
+</body>
+</html>

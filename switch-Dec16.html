@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //    switch case syntax 
+        // switch(expression):
+        // case "1":
+        //   block of code
+        // break
+        // case "2":
+        //   block of code
+        // break
+        // case "3":
+        //   block of code
+        // break
+        // case "4":
+        //   block of code
+        // break
+        // default: 
+        // block of code 
+        // break 
+
+
+
+
+
+        // 1) l*b*h
+        // 2) 4a
+        // 3) which is smallest number of two variables?
+        // 4) negative number
+        // 5) biggest number of 3 variables
+
+debugger;
+        let options = prompt("enter your options \n 1.l*b*h \n 2.4a \n 3.which is smallest number of variables \n 4.negitive number \n 5.biggest number of 3 variables? \n")
+
+
+        switch (options) {
+
+            case "1":
+                let l = prompt("enter your l value")
+                let b = prompt("enter your b value")
+                let h = prompt("enter your h value")
+
+                let f = l * b * h
+                console.log(f)
+                break;
+
+
+            case "2":
+
+                let a = prompt("enter your a value")
+
+
+                a = 4 * a
+                console.log(a)
+                break;
+
+            case "3":
+
+                let x = prompt("enter your x value")
+                let y = prompt("enter your y value")
+
+                if (x < y) {
+                    console.log(+x + `=x is smallest number`)
+                }
+                else {
+                    console.log(+y + `=y is smallest number`)
+                }
+                break;
+
+
+
+            case "4":
+
+                let num = prompt("enter your number")
+                if (num > 0) {
+                    console.log(`positive=` + num + ``)
+                }
+                else {
+                    console.log(`negitive=` + num + ``)
+                }
+                break;
+
+            case "5":
+
+                let m = prompt("enter your m value")
+                let n = prompt("enter your n value")
+                let o = prompt("enter your o value")
+
+                // m n
+                // m o
+                // n o
+
+
+                if (m > n) {
+                    if (m > o) {
+                        console.log(`m is biggest number=` + m + ` `)
+                    }
+                    else {
+                        console.log(`o is biggest number=` + o + ` `)
+                    }
+                }
+                else if (n > o) {
+                    console.log(`n is biggest number=` + n + ` `)
+                }
+                else {
+                    console.log(`o is biggest=` + o + ``)
+                }
+                break;
+
+
+            default:
+                console.log("invalide optionals minimum 1-5")
+        }
+
+
+
+
+
+
+        //  1) day1
+        //  2) day2
+        //  3) day1
+        //  4) day2
+        //  5) day1
+        //  6) day2
+        //  7) day1
+
+
+
+        // let days = prompt("enter your days \n 1.day1 \n 2.day2 \n 3.day3 \n 4.day4 \n 5.day5 \n 6.day6\n 7.day7")
+
+
+
+        // switch (days) {
+        //     case "1":
+        //         alert("Sunday")
+        //         break;
+        //     case "2":
+        //         alert("Monday")
+        //         break;
+        //     case "5":
+        //         alert("Thursday")
+        //         break;
+        //     case "6":
+        //         alert("Friday")
+        //         break;
+        //     case "7":
+        //         alert("Saturday")
+        //         break;
+
+        //     case "3":
+        //         alert("Tuesday")
+        //         break;
+        //     case "4":
+        //         alert("Wednesday")
+        //         break;
+        //     default:
+        //         alert("invalid wrong days")
+        //         break;
+
+        // }
+
+
+    </script>
+</body>
+
+</html>

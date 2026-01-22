@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../array/style.css">
+</head>
+
+<body>
+
+    <form action="">
+        <h1>Student Mark list</h1>
+
+        <input type="text" id="name" placeholder="name">
+       <span id="name_error" class=" error"></span>
+
+        <input type="number" id="tamil" placeholder="tamil">
+        <span id="tamil_error" class=" error"></span>
+
+        <input type="number" id="eng" placeholder="English">
+        <span id="eng_error" class=" error"></span>
+
+
+        <input type="number" id="math" placeholder="maths">
+        <span id="math_error" class=" error"></span>
+
+        <input type="number" id="sci" placeholder="science">
+        <span id="sci_error" class=" error"></span>
+
+
+        <input type="number" id="social" placeholder="social science">
+        <span id="ss_error" class=" error"></span>
+
+        <button type="button" onclick="textContant()">submit</button>
+            <h3 id="students"></h3>
+          <h3 id="gets"></h3>
+
+    </form>
+
+  
+
+
+
+
+    <script>
+
+        let textContant = () => {
+             let names = document.getElementById("name").value
+            let ta_mark =document.getElementById("tamil").value;
+            let Eng_mark =document.getElementById("eng").value;
+            let math_mark =document.getElementById("math").value;
+            let sci_mark = document.getElementById("sci").value;
+            let soc_mark =document.getElementById("social").value;
+
+            let nam_err = document.getElementById("name_error")
+            let ta_err = document.getElementById("tamil_error")
+            let eng_err = document.getElementById("eng_error")
+            let ma_err = document.getElementById("math_error")
+            let sc_err = document.getElementById("sci_error")
+            let ss_err = document.getElementById("ss_error")
+
+
+         //   debugger;
+             let ischeck = false
+
+             if (names === "") {
+                nam_err.innerText = "Enter your name"
+                document.getElementById("name").style.border = "1px solid red"
+                 let ischeck = true
+            }
+             else {
+               nam_err.innerText = ""
+               let ischeck=false
+             
+                }
+
+         if (ta_mark === "") {
+                ta_err.innerText = "Tamil mark can't be empty"
+                 document.getElementById("tamil").style.color = "red"
+                  let ischeck = true
+                 
+            }
+            else if (ta_mark < 0 || ta_mark > 100) {
+                ta_err.innerText = "invalid mark"
+                 let ischeck = false
+                 
+            }
+            else {
+               ta_err.innerText = ""
+                let ischeck = true
+                
+            }
+
+
+
+
+
+             if ( Eng_mark === "") {
+               eng_err.innerText = "English mark can't be empty"
+                let ischeck = false
+                
+            }
+            else if ( Eng_mark < 0 ||  Eng_mark > 100) {
+               eng_err.innerText = "invalid mark"
+                let ischeck = false
+                
+            }
+            else {
+               eng_err.innerText = ""
+                let ischeck = true
+                
+            }
+
+
+
+             if (  math_mark === "") {
+               ma_err.innerText = "Maths mark can't be empty"
+               
+            }
+            else if ( math_mark < 0 ||  math_mark > 100) {
+               ma_err.innerText = "invalid mark"
+               
+            }
+            else {
+               ma_err.innerText = ""
+               
+            }
+
+
+
+            
+             if ( sci_mark === "") {
+               sc_err.innerText = "Science mark can't be empty"
+              
+            }
+            else if (  sci_mark < 0 ||   sci_mark > 100) {
+             sc_err.innerText = "invalid mark"
+              
+            }
+            else {
+               sc_err.innerText = ""
+                
+            }
+
+
+
+
+             if (  soc_mark === "") {
+               ss_err.innerText = "Social science mark can't be empty"
+               
+            }
+            else if (  soc_mark < 0 ||   soc_mark > 100) {
+             ss_err.innerText = "invalid mark"
+              
+            }
+            else {
+               ss_err.innerText = ""
+                
+            }
+
+
+            
+         //   let Student=names
+         //   console.log(student)
+
+           let marks =[names,ta_mark, Eng_mark, math_mark, sci_mark, soc_mark];
+
+            [student,...studentmark]=marks
+             
+          
+
+
+
+            let total = 0;
+
+for (let i = 0; i <studentmark.length; i++) {
+    total +=Number( studentmark[i]);
+
+}
+
+
+
+        let seco = document.getElementById("gets");
+    seco.textContent = `Your Total mark: ${total}`;
+
+
+     let nam=document.getElementById("students");
+         nam.textContent =`student Name:${student}`;
+            }
+
+
+
+    </script>
+</body>
+
+</html>

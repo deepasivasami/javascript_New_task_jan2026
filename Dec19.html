@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //    let name, phone, account = ""
+        //    let bank_balance = 0
+
+        //    let isExist=true
+
+        //    while( isExist){
+        //             let options = prompt("enter your options \n 1.create account \n 2.Deposite \n 3.widthdraw\n 4. balance \n 5.exist \n")
+
+
+        //     switch (options) {
+
+        //             case "1":
+        //          name=prompt("Enter your Name?")
+        //          phone=prompt("Enter your phone number")
+        //          account=prompt("Enter your account number")
+        //          bank_balance=parseFloat(prompt("Enter your balance"))
+        //         alert("your account has been created successfully !!!!")
+        //         break;
+
+        //         case "2":
+        //             let account_number = prompt("Enter your account number")
+
+        //             if(account===account_number){
+        //                 let amount=parseFloat(prompt("do you want do deposit"))
+        //                 bank_balance += amount
+        //                 alert("your amount has been deposited successfully ")
+        //             }
+        //             else{
+        //                 alert("your account number is mismatching")
+        //             }
+        //              break;
+
+
+        //               case "3":
+
+
+        //                 let widthdraws=prompt("Enter your widthdraw amount")
+
+        //                 if(widthdraws<= bank_balance){
+        //                        bank_balance-=widthdraws
+        //                        alert("your amount has been width draw amount successfully")
+        //                 }
+        //                  else{
+        //                 alert("Your balance insuffencully")
+
+        //               }
+
+        //               break;
+
+
+        //             case "4":
+
+        //             console.log(`Name : ${name}`)
+        //              console.log(`phone Number : ${phone}`)
+        //               console.log(`Account no : ${account}`)
+        //               console.log(`Total balance: ${bank_balance}`)
+        //                break;,8
+
+        //                case "5":
+        //                  isExist=false;
+        //                  break;
+        //             default:
+        //                 alert("invalid  1-5 option only")
+
+
+        //     }
+
+
+
+
+        //    }
+
+
+
+        let products_name, stack = ""
+        let price = 0;
+        debugger
+        let isExist = true
+        while (isExist) {
+            let options = prompt("enter your options \n 1.create shope \n 2.refill products \n 3.sales\n 4.Acount total \n 5.exist \n")
+            switch (options) {
+
+                case "1":
+                    products_name = prompt("enter your mobile product name")
+                    stack = parseFloat(prompt("enter your currently stack"))
+                    price = parseFloat(prompt("enter your products price amount"))
+                    alert("your creat a product is successfully")
+
+                    break;
+
+
+
+                case "2":
+
+                          let product_name=prompt("enter your product name")
+
+                          if(product_name==products_name){
+                         
+                    let add_stack = Number(prompt("Enter your add stack count"))
+                    if (add_stack) {
+                        stack += add_stack
+
+                        alert("your product stack is count successfully")
+                    }
+                }
+                else{
+                    alert("product name is mis matching")
+                }
+
+                    break;
+
+                    
+
+
+
+                case "3":
+
+                     let sales = prompt("Enter your products count")
+                      if (sales <= stack) {
+                        stack -= sales
+
+                        if (price) {
+                            price *= sales
+                            alert("Your product recieved your payment is success fully")
+                        }
+                        else {
+                            alert("your not a payment is not insuffience")
+                        }
+
+                        // alert("your sales has been products sales successfully")
+                    }
+
+                    else {
+                        alert("Your stack is insuffencully")
+
+                    }
+                    break;
+
+
+
+
+
+
+
+
+
+                case "4":
+                    console.log(`product name : ${products_name}`)
+                    console.log(`balance stack : ${stack}`)
+                    console.log(`Total price amount : ${price}`)
+
+                    break;
+
+
+                case "5":
+                    isExist = false;
+                    break;
+                default:
+                    alert("invalid  1-5 option only")
+
+
+            }
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

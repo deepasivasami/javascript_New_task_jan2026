@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+
+        let name, account = ""
+         let balance = 0
+
+
+          let isExist=true
+
+           while( isExist){
+                    let options = prompt("enter your options \n 1.create account \n 2.Deposite \n 3.widthdraw\n 4. Showaccount \n 5.exist \n")
+
+
+            switch (options) {
+
+                case "1":
+
+
+                 name=prompt("Enter your Name?")
+                  
+                 account=prompt("Enter your account number")
+                  balance=prompt("Enter your amount")
+                alert("your account has been created successfully !!!!")
+                break;
+
+
+                case "2":
+
+                 let account_number = prompt("Enter your account number")
+
+                    if(account===account_number){
+                        let amount=parseFloat(prompt("do you want do deposit"))
+                        balance += amount
+                        alert("your amount has been deposited successfully ")
+                    }
+                    else{
+                        alert("your account number is mismatching")
+                    }
+                     break;
+
+
+
+                     case "3":
+                     let acco=prompt("Enter your account number")
+
+
+
+                 
+
+                  if (account === acco) {
+                     let width=prompt("Enter your widthdraw amount")
+
+                        if(width<= balance){
+                               balance -= width
+                               alert("your amount has been width draw amount successfully")
+                        }
+                         else{
+                        alert("Your balance insuffencully")
+
+                      }
+                    }
+
+                      break;
+
+
+
+                       case "4":
+
+                    console.log(`Name : ${name}`)
+                      console.log(`Account no : ${account}`)
+                      console.log(`Total balance: ${balance}`)
+                       break;
+
+                       case "5":
+                         isExist=false;
+                         break;
+                    default:
+                        alert("invalid  1-5 option only")
+
+
+
+                }
+            
+
+
+        }
+            
+
+
+    </script>
+</body>
+</html>

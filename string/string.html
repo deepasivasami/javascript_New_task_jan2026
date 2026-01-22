@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../string/string.css">
+</head>
+<body>
+    
+  <div class="container">
+    <label for="">Message</label>
+    <textarea name="text" id="message" placeholder="enter text..........."></textarea>
+
+      <button onclick="textContant()">submit</button>
+
+       <h1 id="total"></h1>
+  <h1 id="capital"></h1>
+  <h1 id="small"></h1>
+  <h1 id="number"></h1>
+  <h1 id="specialCharacter"></h1>
+
+  </div>
+
+   <script>
+          
+
+
+let textContant = () => {
+
+  debugger
+
+    let mess = document.getElementById("message").value;
+
+     let text=mess.trim()
+
+     let capital = 0;
+  let small = 0;
+  let number = 0;
+  let specialCharacter=0;
+
+   for(let i=0;i<text.length;i++){
+    let code =text.charCodeAt(i)
+
+    if (code >= 65 && code <= 90) {
+      capital++;
+    }
+     if (code >= 97 && code <= 122) {
+      small++;
+    }
+     if (code >=48 && code <= 57) {
+      number++;
+    }
+
+    if((code >=32 && code<=47) || (code >=58 && code<=64) || (code >=91 && code <=96) || (code >=123 && code <=124)){
+         specialCharacter++;
+    }
+
+   }
+
+
+  document.getElementById("total").innerText =
+    `Total Characters: ${text.length}`;
+
+  document.getElementById("capital").innerText =
+    `Capital Letters: ${capital}`;
+
+  document.getElementById("small").innerText =
+    `Small Letters: ${small}`;
+
+  document.getElementById("number").innerText =
+    `Numbers: ${number}`;
+    document.getElementById("specialCharacter").innerText = `special: ${specialCharacter}`;
+}
+  
+
+
+   </script>
+
+
+</body>
+</html>

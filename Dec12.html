@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>if -else - ladder</h1>
+
+
+    <!-- if else lader syntax
+
+
+if(condition){
+console.log(block of code)
+
+}
+else if(condition2){
+    console.log(block of code)
+
+}
+else if(condition3){
+    console.log(block of code)
+
+}
+else if(condition4){
+    console.log(block of code)
+
+}
+
+ -->
+
+
+
+    <h1>Nested if</h1>
+
+
+
+
+    <!-- syntax -->
+
+
+
+
+    <!-- if(condition){     ///inta contaition true aga irunthal block ikul alwo          pnum                 elaiya block vetu vealiya poidum
+
+
+
+    if(condition2){
+        block of code
+    }
+    else{
+        block of code
+    }
+}
+else if(condition3){
+    block of code
+}
+else{
+    block of code
+}
+ -->
+
+
+
+
+    <script>
+        // 1)questions
+
+        //  90-100=A gragd
+        //  80-89=B gragd
+        //  70-79=C gragd
+        //  60-69=D gragd
+        //  35-59=E gragd
+        //  below-35=F fail
+
+        // let mark=prompt("enter your mark statement")
+
+
+        // if(mark>=90 && mark<=100){
+        //     console.log("A Grade")
+        // }
+        // else if(mark>=80 && mark<=89){
+        //      console.log("B Grade")
+
+        // }
+        // else if(mark>=70 && mark<=79){
+        //      console.log("C Grade")
+
+        // }
+        // else if(mark>=60 && mark<=69){
+        //      console.log("D Grade")
+
+        // }
+        // else if( mark>=35 && mark<59){
+        //      console.log("E Grade")
+
+        // }
+        // else if(mark<35){
+        //      console.log("You are fail")
+
+        // }
+        // else{
+
+        // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // 2)question
+
+
+
+        // 100 - 150
+        // 200 - 250
+        // 300 - 350
+        // above = 500
+
+
+
+
+        // let price = prompt("enter the discount value")
+
+        // debugger
+
+        // if (price <100) {
+        //     console.log(`Not a discount price`)
+        // }
+        // else if (price >= 100 && price <= 150) {
+
+
+        //     let number = price
+
+        //     number = price * 10 / 100
+
+        //     let nums = price - number
+
+        //     console.log(`10% discount = ` + nums + `total price amount`)
+        // }
+        // else if (price >= 200 && price <= 250) {
+        //     let number = price
+
+        //     number = price * 20 / 100
+
+        //    let nums = price - number
+
+        //     console.log(`20% discount = ` + nums + `total price amount`)
+
+        // }
+
+        // else if (price >= 300 && price <= 350) {
+        //     let number = price
+
+        //     number = price * 30 / 100
+
+        //   let nums = price - number
+
+        //     console.log(`30% discount = ` + nums + `total price amount`)
+
+        // }
+
+        // else if (price >= 500) {
+        //     let number = price
+
+        //     number = price * 50 / 100
+
+        // let nums = price - number
+
+        //     console.log(`50% discount = ` + nums + `total price amount`)
+
+        // }
+
+        // else {
+
+        // }
+
+
+
+// Time 6to 12 na mrng
+// 12 to 17 na afternoon
+// 17 to 21 na eve
+// 21 to23 na nite
+// Ethuvum ilana else la invalid kudu
+
+//   let time=prompt("enter the time set")
+
+// if (time >=6 && time <= 12){
+
+//     console.log(`morning`)
+
+// }
+// else if (time >=12 && time <= 17){
+//       console.log(`afternoon`)
+    
+// }
+// else if (time >=17 && time <= 21){
+
+//  console.log(`evening`)
+    
+// }
+//  else if (time >=21 && time <= 23){
+//      console.log(`might night`)
+    
+// }
+
+
+
+//   nested if statement 
+
+
+
+// a b c 
+
+// a b
+// a c
+// b c
+
+// let a=30
+// let b=50
+// let c=90
+
+// if(a>b){
+//     if(a>c){
+//         console.log(`a is big`)
+//     }
+//     else{
+//         console.log(`c is big`)
+//     }
+// }
+// else if(b>c){
+//     console.log(`b is big`)
+// }
+// else{
+//     console.log(`c is big`)
+// }
+
+// For the first 50 units: ₹3.50/unit
+// For the next 100 units (51 to 150): ₹4.00/unit
+// For the next 100 units (151 to 250): ₹5.20/unit
+// For units above 250: ₹6.50/unit
+// An additional surcharge of 20% is added to the total bill." 
+
+
+
+
+
+let units=prompt("YOU ARE EB UNITS COUNT")
+
+
+if(units<=100){
+    console.log("Eb bill Free")
+}
+else if(units >= 101 && units <=200){
+
+    let count=units *2.25
+
+    console.log(`2.25  units` +count+ `total amount`)
+}
+else if(units >= 201 && units <= 300){
+     let count=units *4.50
+    console.log(`4.50 units` +count+ `total amount` )
+}
+else if(units >= 301 && units <= 400){
+     let count=units *6.75
+    console.log(`6.75 units` +count+ `total amount`)
+}
+
+else if(units >= 401 && units <= 500){
+     let count=units *9.00
+    console.log(`9.00 units` +count+ `total amount` )
+}
+
+
+
+
+    </script>
+
+</body>
+
+</html>
