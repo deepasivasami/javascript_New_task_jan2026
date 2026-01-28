@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        /*     
+        1) 
+           A B C D E
+           A B C D E
+           A B C D E
+           A B C D E
+           A B C D E     */
+
+
+
+
+        // for (let i = 1; i <= 5; i++) {
+        //     for (let j = 1; j <= 5; j++) {
+        //         if (j == 1) {
+        //             document.writeln("A")
+        //         }
+        //         else if (j == 2) {
+        //             document.writeln("B")
+        //         }
+        //         else if (j == 3) {
+        //             document.writeln("C")
+        //         }
+        //         else if (j == 4) {
+        //             document.writeln("D")
+
+        //         }
+        //         else if (j == 5) {
+        //             document.writeln("E")
+        //         }
+
+        //     }
+
+        //     document.writeln("<br>")
+        // }
+
+
+
+
+
+        for (let i = 1; i <= 5; i++) {
+    for (let j = 1; j <= 5; j++) {
+        document.write(String.fromCharCode(64 + j) , " &nbsp");
+    }
+    document.write("<br>");
+}
+
+
+
+      
+    /*
+        2)
+
+        a b c d e
+        a b c d
+        a b c
+        a b
+        a
+
+
+        */
+
+
+
+        for (let i = 5; i >= 1; i--) {
+            for (let j = 1; j <= i; j++) {
+
+                document.write(String.fromCharCode(96 + j) , " &nbsp");
+                }
+
+            document.writeln("<br>")
+        }
+
+
+
+        // for (let i = 5; i >= 1; i--) {
+        //     for (let j = 1; j <= i; j++) {
+
+
+        //         if (j == 1) {
+        //             document.writeln("a")
+        //         }
+        //         else if (j == 2) {
+        //             document.writeln("b")
+        //         }
+        //         else if (j == 3) {
+        //             document.writeln("c")
+        //         }
+        //         else if (j == 4) {
+        //             document.writeln("d")
+
+        //         }
+        //         else if (j == 5) {
+        //             document.writeln("e")
+        //         }
+
+        //     }
+
+        //     document.writeln("<br>")
+        // }
+
+
+/*
+        3)
+          1  
+          2  3
+          4  5   6
+          7  8   9  10
+          11 12 13  14  15
+
+
+
+
+        */
+
+//   debugger
+   let a=1
+   for (let i=1;i<=5;i++){
+    for(let j=1;j<=i;j++){
+            
+         document.writeln(a,"&nbsp")
+         a++
+          
+    }
+     document.writeln("<br>")
+   }
+
+
+/*
+
+   4)
+
+   1  2  3   4   5 
+   6  7  8   9  10  
+   11 12 13  14 15 
+   16 17 18  19 20
+   21 22 23  24 25
+   
+   */
+        let b=1
+            for(let i=1;i<=5;i++){
+                for(let j=1;j<=5;j++){
+                     document.write(b,"&nbsp &nbsp &nbsp&nbsp")                     
+                      b++
+                }
+                document.write("<br>")
+       }
+
+        
+/*
+5)   
+
+      1
+    2   2
+  3   3    3
+ 4  4    4   4
+5   5  5   5   5
+
+   
+
+*/
+
+       
+let m = 1;
+
+for (let i = 5; i >= 1; i--) {
+
+    for (let j = 1; j < i; j++) {
+        document.write("&nbsp;&nbsp;");
+    }
+
+    for (let k = 1; k <= m; k++) {
+        document.write(m ,"&nbsp;&nbsp");
+       
+    }
+      m++;
+
+   
+    document.write("<br>");
+}
+/*                     *
+ 6)                        *
+                       *       *
+                           *      *
+                       *       *      *
+                           *      *
+                       *       *
+                           *
+                       *
+                        
+
+
+
+                       */
+// debugger
+//            let d=1
+//          for(let i=5;i>=1;i--) {
+//             for(let j=5;j>=i;j--){
+//                 document.writeln(i)
+//             }   
+
+            // for(let k=1;k<=5-k;k++){
+            //     document.writeln("*")
+
+            // }
+           
+    //     document.writeln("<br>")
+
+    //    for(let k=1;k<=5;k++){
+    //     document.writeln(i)
+    //    }
+
+    //      } 
+         
+    //  7) 
+
+    //     1 2 3 4  5 
+    //     2 4 6 8  10  
+    //     3 6 9 12 15
+     //    4 8 12 16 20  
+     //    5 10 15 20 25
+
+
+
+  debugger
+  for(let i=1;i<=5;i++){
+   
+ for(let j=1;j<=5;j++){
+
+       document.writeln(i*j,"&nbsp;&nbsp")
+        
+    }
+   
+    
+
+    document.write("<br>");
+  }
+
+
+
+  for(let i=1;i<=9;i++){
+    for(let j=1;j<=5;j++){
+        // document.writeln("*","&nbsp")
+
+         if (i == 1 && (  j == 1)) {
+
+                            document.writeln("*", "&nbsp;")
+
+                        }
+                        else if (i == 2 && (j == 1 || j==2)) {
+                            document.writeln("*", "&nbsp;")
+                        }
+                        else if (i == 3 && (j == 1  || j == 2 ||j==3)) {
+                            document.writeln("*", "&nbsp;")
+                        }
+                        else if (i == 4 && (j == 1 ||j == 2 ||j==3 || j==4)) {
+                            document.writeln("*", "&nbsp;")
+                        }
+                        else if (i == 5 &&(j == 1 ||j == 2 ||j==3 || j==4 || j==5) ) {
+                            document.writeln("*", "&nbsp;")
+                        }
+                        else if (i == 6 &&(j == 1 ||j == 2 ||j==3 || j==4 ) ) {
+                            document.writeln("*", "&nbsp;")
+                        }
+                        else if (i == 7 &&(j == 1 ||j == 2 ||j==3) ) {
+                            document.writeln("*", "&nbsp;")
+                        }
+                        else if (i == 8 &&(j == 1 ||j == 2) ) {
+                            document.writeln("*", "&nbsp;")
+                        }
+                        else if (i == 9 &&(j == 1) ) {
+                            document.writeln("*", "&nbsp;")
+                        }
+                        else {
+                            document.writeln("&nbsp;&nbsp;&nbsp;")
+                        }
+                         
+    
+
+                    }
+                    document.write("<br>");
+    }
+    
+   
+  
+
+
+
+
+    for (let i = 1; i <= 5; i++) {
+                    for (let j = 1; j <= 9; j++) {
+
+                        if (i == 1 && (  j == 4)) {
+
+                            document.writeln("*", "&nbsp;")
+
+                        }
+                        else if (i == 2 && (j == 3 || j==5)) {
+                            document.writeln("*", "&nbsp;")
+                        }
+                        else if (i == 3 && (j == 2  || j == 6)) {
+                            document.writeln("*", "&nbsp;")
+                        }
+                        else if (i == 4 && (j == 1 ||j == 7)) {
+                            document.writeln("*", "&nbsp;")
+                        }
+                        else if (i == 5 && j<=7) {
+                            document.writeln("*", "&nbsp;")
+                        }
+                        else {
+                            document.writeln("&nbsp;&nbsp;&nbsp;")
+                        }
+
+                    }
+                    document.writeln("<br>")
+                }
+
+
+
+
+
+
+                 for (let i = 1; i <= 6; i++) {
+                    for (let j = 1; j <= 9; j++) {
+
+                        if (i == 1 && (  j == 2|| j==6)) {
+
+                            document.writeln("*", "&nbsp;")
+
+                        }
+                        else if (i == 2 && (j == 1 || j==3 || j==5 ||j==7)) {
+                            document.writeln("*", "&nbsp;")
+                        }
+                        else if (i == 3 && (j == 1  || j == 4 ||j==7)) {
+                            document.writeln("*", "&nbsp;")
+                        }
+                        else if (i == 4 && (j == 2 ||j == 6)) {
+                            document.writeln("*", "&nbsp;")
+                        }
+                        else if (i == 5 && (j==3 ||j==5)) {
+                            document.writeln("*", "&nbsp;")
+                        }
+                        else if (i == 6 && (j==4)) {
+                            document.writeln("*", "&nbsp;")
+                        }
+                        else {
+                            document.writeln("&nbsp;&nbsp;&nbsp;")
+                        }
+
+                    }
+                    document.writeln("<br>")
+                }
+
+
+
+//   1 * * * * 
+//   2 2 * * *
+//   3 3 3 * *
+//   4 4 4 4 *
+//   5 5 5 5 5
+      
+
+
+let n = 4;
+
+for (let i=1;i<=5;i++){
+    for(let j=1;j<=i;j++){
+          document.writeln(i, "&nbsp;")
+          
+
+    }
+     for (let k = i; k <= n; k++) {
+        document.write("*");
+    }
+
+
+    document.writeln("<br>")
+
+}
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
